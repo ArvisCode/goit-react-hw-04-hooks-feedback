@@ -1,9 +1,8 @@
 import PropTypes from 'prop-types';
 import css from './FeedbackOptions.module.css';
-import btnBgColorFun from './btnBgColor';
+import btnBgColorFun from 'utilities/btnBgColor';
 
-function FeedbackOptions({ options, onLeaveFeedback }) {
-  console.log(btnBgColorFun);
+export default function FeedbackOptions({ options, onLeaveFeedback }) {
   return (
     <ul className={css.list}>
       {options.map(option => {
@@ -30,5 +29,3 @@ FeedbackOptions.prototype = {
   onLeaveFeedback: PropTypes.func.isRequired,
   btnBgColorFun: PropTypes.func.isRequired,
 };
-
-export default FeedbackOptions;

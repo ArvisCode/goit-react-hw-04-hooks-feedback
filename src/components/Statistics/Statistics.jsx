@@ -1,7 +1,13 @@
 import PropTypes from 'prop-types';
 import css from './Statistics.module.css';
 
-function Statistics({ good, neutral, bad, total, positivePercentage }) {
+export default function Statistics({
+  good,
+  neutral,
+  bad,
+  total,
+  positivePercentage,
+}) {
   return (
     <ul>
       <li className={css.item}>
@@ -41,5 +47,3 @@ Statistics.prototype = {
   total: PropTypes.number.isRequired,
   positivePercentage: PropTypes.string.isRequired,
 };
-
-export default Statistics;
